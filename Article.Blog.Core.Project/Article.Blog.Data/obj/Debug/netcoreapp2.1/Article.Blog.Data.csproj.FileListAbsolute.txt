@@ -1,0 +1,10 @@
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\bin\Debug\netcoreapp2.1\Article.Blog.Data.deps.json
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\bin\Debug\netcoreapp2.1\Article.Blog.Data.runtimeconfig.json
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\bin\Debug\netcoreapp2.1\Article.Blog.Data.runtimeconfig.dev.json
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\bin\Debug\netcoreapp2.1\Article.Blog.Data.dll
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\bin\Debug\netcoreapp2.1\Article.Blog.Data.pdb
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\obj\Debug\netcoreapp2.1\Article.Blog.Data.csproj.CoreCompileInputs.cache
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\obj\Debug\netcoreapp2.1\Article.Blog.Data.AssemblyInfoInputs.cache
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\obj\Debug\netcoreapp2.1\Article.Blog.Data.AssemblyInfo.cs
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\obj\Debug\netcoreapp2.1\Article.Blog.Data.dll
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Data\obj\Debug\netcoreapp2.1\Article.Blog.Data.pdb

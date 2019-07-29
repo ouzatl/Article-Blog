@@ -1,0 +1,14 @@
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\bin\Debug\netcoreapp2.1\Article.Blog.Repository.deps.json
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\bin\Debug\netcoreapp2.1\Article.Blog.Repository.dll
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\bin\Debug\netcoreapp2.1\Article.Blog.Repository.pdb
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\bin\Debug\netcoreapp2.1\Article.Blog.Common.dll
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\bin\Debug\netcoreapp2.1\Article.Blog.Data.dll
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\bin\Debug\netcoreapp2.1\Article.Blog.Common.pdb
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\bin\Debug\netcoreapp2.1\Article.Blog.Data.pdb
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\obj\Debug\netcoreapp2.1\Article.Blog.Repository.csprojAssemblyReference.cache
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\obj\Debug\netcoreapp2.1\Article.Blog.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\obj\Debug\netcoreapp2.1\Article.Blog.Repository.AssemblyInfoInputs.cache
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\obj\Debug\netcoreapp2.1\Article.Blog.Repository.AssemblyInfo.cs
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\obj\Debug\netcoreapp2.1\Article.Blog.Repository.csproj.CopyComplete
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\obj\Debug\netcoreapp2.1\Article.Blog.Repository.dll
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\obj\Debug\netcoreapp2.1\Article.Blog.Repository.pdb

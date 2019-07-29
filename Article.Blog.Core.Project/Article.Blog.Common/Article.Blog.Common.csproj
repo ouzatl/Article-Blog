@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Templates\ArticleTemplates\" />
+    <Folder Include="Templates\CommentTemplates\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Article.Blog.Data\Article.Blog.Data.csproj" />
+  </ItemGroup>
+
+</Project>
