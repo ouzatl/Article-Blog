@@ -25,7 +25,12 @@ namespace Article.Blog.Api.Controllers
         private readonly IOptions<SiteConfig> _config;
         private readonly IMemoryCache _memoryCache;
 
-        public UserController(IUserRepository userRepository, IMapper mapper, ILog logger,IOptions<SiteConfig> config, IMemoryCache memoryCache)
+        public UserController(
+            IUserRepository userRepository,
+            IMapper mapper,
+            ILog logger,
+            IOptions<SiteConfig> config,
+            IMemoryCache memoryCache)
         {
             _userRepository = userRepository;
             _mapper = mapper;
@@ -42,17 +47,16 @@ namespace Article.Blog.Api.Controllers
             try
             {
                 var allUser = _userRepository.GetAll();
-                var x =allUser.ToList();
                 var userTemplate = new List<UserTemplate>();
                 userTemplate = _mapper.Map<List<UserTemplate>> (allUser);
-                return Ok(userTemplate);
+
+                return Ok(userTemplate.Where(x => x.IsActive == true));
             }
             catch (System.Exception ex)
             {
                 _logger.Error($"Get All User:{ex}");
+                return BadRequest(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Exception));
             }
-
-            return BadRequest();
         }
 
         [HttpPost]
@@ -74,7 +78,6 @@ namespace Article.Blog.Api.Controllers
                 _logger.Error($"User Add :{ex}");
                 return BadRequest(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Exception));
             }
-
         }
 
         [HttpPost]
@@ -84,8 +87,8 @@ namespace Article.Blog.Api.Controllers
         {
             try
             {
-                var user2 = _mapper.Map<User>(user);
-                _userRepository.Update(user2);
+                var userMap = _mapper.Map<User>(user);
+                _userRepository.Update(userMap);
 
                 return Ok(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Success));
             }

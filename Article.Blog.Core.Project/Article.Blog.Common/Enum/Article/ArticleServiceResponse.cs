@@ -2,9 +2,8 @@
 
 namespace Article.Blog.Common.Enum.Article
 {
-    public enum ArticleResponseService
+    public enum ArticleServiceResponse
     {
-
         [EnumMember]
         Exception = 0,
 
@@ -19,7 +18,7 @@ namespace Article.Blog.Common.Enum.Article
 
         [EnumMember]
         FormAuthenticationRecordRequired = -11,
- 
+
         [EnumMember]
         ArticleAlreadyExists = -31,
 
