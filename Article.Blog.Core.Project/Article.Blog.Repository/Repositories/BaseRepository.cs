@@ -45,7 +45,7 @@ namespace Article.Blog.Repository.Repositories
             {
                 T _entity = entity;
 
-                _entity.GetType().GetProperty("IsActive").SetValue(_entity, true);
+                _entity.GetType().GetProperty("IsActive").SetValue(_entity, false);
 
                 this.Update(_entity);
             }

@@ -1,12 +1,17 @@
-﻿using Article.Blog.Common.Enum;
+﻿using Article.Blog.Common.Config;
+using Article.Blog.Common.Enum;
 using Article.Blog.Common.Enum.User;
+using Article.Blog.Common.Helpers;
 using Article.Blog.Common.NLog;
 using Article.Blog.Common.Templates.UserTemplates;
 using Article.Blog.Data.Models;
 using Article.Blog.Repository.Repositories.UserRepository;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Article.Blog.Api.Controllers
 {
@@ -14,17 +19,19 @@ namespace Article.Blog.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        //private static Ilogger Ilogger;
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
         private readonly ILog _logger;
+        private readonly IOptions<SiteConfig> _config;
+        private readonly IMemoryCache _memoryCache;
 
-        public UserController(IUserRepository userRepository, IMapper mapper, ILog logger)
+        public UserController(IUserRepository userRepository, IMapper mapper, ILog logger,IOptions<SiteConfig> config, IMemoryCache memoryCache)
         {
             _userRepository = userRepository;
             _mapper = mapper;
             _logger = logger;
-
+            _config = config;
+            _memoryCache = memoryCache;
         }
 
         [HttpGet]
@@ -35,8 +42,10 @@ namespace Article.Blog.Api.Controllers
             try
             {
                 var allUser = _userRepository.GetAll();
-
-                return Ok(allUser);
+                var x =allUser.ToList();
+                var userTemplate = new List<UserTemplate>();
+                userTemplate = _mapper.Map<List<UserTemplate>> (allUser);
+                return Ok(userTemplate);
             }
             catch (System.Exception ex)
             {
@@ -49,47 +58,59 @@ namespace Article.Blog.Api.Controllers
         [HttpPost]
         [Route("AddUser")]
         [ProducesResponseType(typeof(ServiceResponse<UserServiceResponse,UserTemplate>),200)]
-        public void Add([FromBody] UserTemplate user)
+        public IActionResult Add([FromBody] UserTemplate user)
         {
             try
             {
-                var user2 = _mapper.Map<User>(user);
-                _userRepository.Add(user2);
+                user.Password = EncryptionDecryption.EncryptString(_config.Value.HashKey, user.Password);
+
+                var userMap = _mapper.Map<User>(user);
+                _userRepository.Add(userMap);
+
+                return Ok(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Success));
             }
             catch (System.Exception ex)
             {
                 _logger.Error($"User Add :{ex}");
+                return BadRequest(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Exception));
             }
+
         }
 
         [HttpPost]
         [Route("UpdateUser")]
         [ProducesResponseType(typeof(ServiceResponse<UserServiceResponse, UserTemplate>), 200)]
-        public void Update([FromBody] UserTemplate user)
+        public IActionResult Update([FromBody] UserTemplate user)
         {
             try
             {
                 var user2 = _mapper.Map<User>(user);
                 _userRepository.Update(user2);
+
+                return Ok(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Success));
             }
             catch (System.Exception ex)
             {
                 _logger.Error($"User Update :{ex}");
+                return BadRequest(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Exception));
             }
         }
 
         [HttpPost]
         [Route("DeleteUser")]
         [ProducesResponseType(typeof(ServiceResponse<UserServiceResponse, UserTemplate>), 200)]
-        public void Delete([FromBody] int id)
+        public IActionResult Delete(int id)
         {
             try
             {
                 _userRepository.Delete(id);
+
+                return Ok(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Success));
             }
             catch (System.Exception ex)
             {
                 _logger.Error($"User Delete :{ex}");
+                return BadRequest(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Exception));
             }
         }
     }

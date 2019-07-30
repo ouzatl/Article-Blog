@@ -1,8 +1,8 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Article.Blog.Common.Enum.User
+namespace Article.Blog.Common.Enum.Comment
 {
-    public enum UserServiceResponse
+    public enum CommentServiceResponse
     {
 
         [EnumMember]
@@ -21,28 +21,10 @@ namespace Article.Blog.Common.Enum.User
         FormAuthenticationRecordRequired = -11,
 
         [EnumMember]
-        InvalidPassword = -12,
-
-        [EnumMember]
-        InvalidName = -20,
-
-        [EnumMember]
-        InvalidSurname = -21,
-
-        [EnumMember]
-        EmailAlreadyExists = -31,
-
-        [EnumMember]
-        NameLengthTooLong = -60,
-
-        [EnumMember]
-        SurnameLengthTooLong = -61,
+        CommentLengthTooLong = -60,
 
         [EnumMember]
         NameContainsNumericAndSpecialCharacters = 70,
-
-        [EnumMember]
-        SurnameContainsNumericAndSpecialCharacters = 71,
 
         [EnumMember]
         TooMuchWhiteSpaceForNameField = 80,

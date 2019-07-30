@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Mapper\ArticleMap\" />
+    <Folder Include="Mapper\CommentMap\" />
     <Folder Include="Templates\ArticleTemplates\" />
     <Folder Include="Templates\CommentTemplates\" />
   </ItemGroup>
