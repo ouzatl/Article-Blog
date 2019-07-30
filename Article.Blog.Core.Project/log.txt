@@ -1,0 +1,54 @@
+2019-07-30 02:12:47.4020 ERROR Get All User:AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+InternalDbSet`1 -> UserTemplate
+Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[Article.Blog.Data.Models.User, Article.Blog.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Article.Blog.Common.Templates.UserTemplates.UserTemplate
+   at lambda_method(Closure , InternalDbSet`1 , UserTemplate , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Article.Blog.Api.Controllers.UserController.GetAll() in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Api\Controllers\UserController.cs:line 37
+2019-07-30 02:13:34.7345 ERROR Get All User:AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+InternalDbSet`1 -> UserTemplate
+Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[Article.Blog.Data.Models.User, Article.Blog.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Article.Blog.Common.Templates.UserTemplates.UserTemplate
+   at lambda_method(Closure , InternalDbSet`1 , UserTemplate , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Article.Blog.Api.Controllers.UserController.GetAll() in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Api\Controllers\UserController.cs:line 37
+2019-07-30 02:13:38.1730 ERROR Get All User:AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+InternalDbSet`1 -> UserTemplate
+Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[Article.Blog.Data.Models.User, Article.Blog.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Article.Blog.Common.Templates.UserTemplates.UserTemplate
+   at lambda_method(Closure , InternalDbSet`1 , UserTemplate , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Article.Blog.Api.Controllers.UserController.GetAll() in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Api\Controllers\UserController.cs:line 37
+2019-07-30 02:13:44.2840 ERROR Get All User:AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+InternalDbSet`1 -> UserTemplate
+Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[Article.Blog.Data.Models.User, Article.Blog.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Article.Blog.Common.Templates.UserTemplates.UserTemplate
+   at lambda_method(Closure , InternalDbSet`1 , UserTemplate , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Article.Blog.Api.Controllers.UserController.GetAll() in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Api\Controllers\UserController.cs:line 37
+2019-07-30 02:14:08.1393 ERROR Get All User:AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+InternalDbSet`1 -> UserTemplate
+Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[Article.Blog.Data.Models.User, Article.Blog.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Article.Blog.Common.Templates.UserTemplates.UserTemplate
+   at lambda_method(Closure , InternalDbSet`1 , UserTemplate , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Article.Blog.Api.Controllers.UserController.GetAll() in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Api\Controllers\UserController.cs:line 37
+2019-07-30 02:14:11.4547 ERROR Get All User:AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+InternalDbSet`1 -> UserTemplate
+Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[Article.Blog.Data.Models.User, Article.Blog.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> Article.Blog.Common.Templates.UserTemplates.UserTemplate
+   at lambda_method(Closure , InternalDbSet`1 , UserTemplate , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 212
+   at Article.Blog.Api.Controllers.UserController.GetAll() in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Api\Controllers\UserController.cs:line 37

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "6b2f4527c19f52e8d8f3082b7a14a7bb0ba96709"
+    "signature": "b7ed0b5d11a512c6a334dae217c6da27bc19e590"
   },
   "compilationOptions": {
     "defines": [
@@ -36,6 +36,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.1",
+          "NLog.Extensions.Logging": "1.5.2",
           "Swashbuckle.AspNetCore": "4.0.1"
         },
         "runtime": {
@@ -433,6 +434,32 @@
           "Microsoft.NETCore.Platforms": "2.1.0"
         }
       },
+      "NLog/4.6.5": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.5.10245"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Extensions.Logging/1.5.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "NLog": "4.6.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.5.2.1050"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        }
+      },
       "NuGet.Frameworks/4.7.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3"
@@ -652,7 +679,8 @@
       "Article.Blog.Common/1.0.0": {
         "dependencies": {
           "Article.Blog.Data": "1.0.0",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.1.1"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.1.1",
+          "NLog.Extensions.Logging": "1.5.2"
         },
         "runtime": {
           "Article.Blog.Common.dll": {}
@@ -3787,6 +3815,20 @@
       "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "NLog/4.6.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iM0VsNBxnyzyoJWUBrXkFJvHRWTeaVAPjRETzknnGNVicD7C4FYpWszzdF43ugTh6a+StbZffaII9KKEFM5xsA==",
+      "path": "nlog/4.6.5",
+      "hashPath": "nlog.4.6.5.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/1.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qtwUy9WShii2gdAc/cfs1da7iY/USA+y49IfCZlmEIoaimq6NRTBzVYtiSFppRWgSWQuAQ7JnuWeQ3Dk4w92vA==",
+      "path": "nlog.extensions.logging/1.5.2",
+      "hashPath": "nlog.extensions.logging.1.5.2.nupkg.sha512"
     },
     "NuGet.Frameworks/4.7.0": {
       "type": "package",

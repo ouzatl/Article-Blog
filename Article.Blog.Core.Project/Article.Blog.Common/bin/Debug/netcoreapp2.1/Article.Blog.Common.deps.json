@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "3b9ed66f0e0c5dfa6cfb6236b7540930cf898e99"
+    "signature": "3411a992519f1104f7513ba9325d6f1cf951b10b"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,8 @@
       "Article.Blog.Common/1.0.0": {
         "dependencies": {
           "Article.Blog.Data": "1.0.0",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.1.1"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "6.1.1",
+          "NLog.Extensions.Logging": "1.5.2"
         },
         "runtime": {
           "Article.Blog.Common.dll": {}
@@ -250,6 +251,26 @@
           "runtime/win/lib/_._": {
             "rid": "win",
             "assetType": "runtime"
+          }
+        }
+      },
+      "NLog/4.6.5": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.5.10245"
+          }
+        }
+      },
+      "NLog.Extensions.Logging/1.5.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.1.1",
+          "NLog": "4.6.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.5.2.1050"
           }
         }
       },
@@ -719,6 +740,20 @@
       "sha512": "sha512-vduxuHEqRgRrTE8wYG8Wxj/+6wwzddOmZzjKZx6rFMc/91aUBxI5etAFYxesoNaIja5NpgSTcnk6cN8BeYXf9A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "NLog/4.6.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iM0VsNBxnyzyoJWUBrXkFJvHRWTeaVAPjRETzknnGNVicD7C4FYpWszzdF43ugTh6a+StbZffaII9KKEFM5xsA==",
+      "path": "nlog/4.6.5",
+      "hashPath": "nlog.4.6.5.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/1.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qtwUy9WShii2gdAc/cfs1da7iY/USA+y49IfCZlmEIoaimq6NRTBzVYtiSFppRWgSWQuAQ7JnuWeQ3Dk4w92vA==",
+      "path": "nlog.extensions.logging/1.5.2",
+      "hashPath": "nlog.extensions.logging.1.5.2.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",

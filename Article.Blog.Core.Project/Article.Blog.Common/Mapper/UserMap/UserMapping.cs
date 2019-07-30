@@ -8,8 +8,8 @@ namespace Article.Blog.Common.Mapper.UserMap
     {
         public UserMapping()
         {
-            //CreateMap<User, UserTemplate>();
-            CreateMap<UserTemplate, User>();
+            CreateMap<User, UserTemplate>()
+                .ReverseMap();
         }
     }
 }
