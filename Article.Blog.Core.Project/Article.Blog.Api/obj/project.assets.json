@@ -4783,7 +4783,10 @@
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
           "Article.Blog.Common": "1.0.0",
-          "Article.Blog.Data": "1.0.0"
+          "Article.Blog.Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6"
         },
         "compile": {
           "bin/placeholder/Article.Blog.Repository.dll": {}
@@ -12565,7 +12568,6 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.1.1",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
-      "Microsoft.EntityFrameworkCore >= 2.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.1",
@@ -12640,10 +12642,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.2, )"
-          },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[2.1.1, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",

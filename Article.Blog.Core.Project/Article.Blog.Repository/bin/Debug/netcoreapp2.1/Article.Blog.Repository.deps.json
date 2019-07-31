@@ -9,7 +9,10 @@
       "Article.Blog.Repository/1.0.0": {
         "dependencies": {
           "Article.Blog.Common": "1.0.0",
-          "Article.Blog.Data": "1.0.0"
+          "Article.Blog.Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.1.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.6"
         },
         "runtime": {
           "Article.Blog.Repository.dll": {}

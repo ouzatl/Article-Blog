@@ -5,13 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapper\ArticleMap\" />
-    <Folder Include="Mapper\CommentMap\" />
-    <Folder Include="Templates\ArticleTemplates\" />
-    <Folder Include="Templates\CommentTemplates\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
     <PackageReference Include="NLog.Extensions.Logging" Version="1.5.2" />
   </ItemGroup>

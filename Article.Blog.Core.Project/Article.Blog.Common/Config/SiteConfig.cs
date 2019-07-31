@@ -4,5 +4,6 @@
     {
         public string HashKey { get; set; }
         public string Version { get; set; }
+        public string ArticleCacheKey { get; set; }
     }
 }

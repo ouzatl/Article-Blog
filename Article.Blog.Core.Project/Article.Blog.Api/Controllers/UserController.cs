@@ -10,6 +10,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -40,17 +41,18 @@ namespace Article.Blog.Api.Controllers
         }
 
         [HttpGet]
+
         [Route("GetAllUser")]
         [ProducesResponseType(200,Type = typeof(IEnumerable<UserTemplate>))]
         public IActionResult GetAll()
         {
             try
             {
-                var allUser = _userRepository.GetAll();
+                var allUser = _userRepository.GetAll().Where(x => x.IsActive == true);
                 var userTemplate = new List<UserTemplate>();
                 userTemplate = _mapper.Map<List<UserTemplate>> (allUser);
 
-                return Ok(userTemplate.Where(x => x.IsActive == true));
+                return Ok(userTemplate);
             }
             catch (System.Exception ex)
             {
@@ -66,6 +68,10 @@ namespace Article.Blog.Api.Controllers
         {
             try
             {
+                UserServiceResponse validation = Validate(user);
+                if (validation != UserServiceResponse.Success)
+                    return Ok(new ServiceResponse<UserServiceResponse, UserTemplate>(validation));
+
                 user.Password = EncryptionDecryption.EncryptString(_config.Value.HashKey, user.Password);
 
                 var userMap = _mapper.Map<User>(user);
@@ -87,6 +93,14 @@ namespace Article.Blog.Api.Controllers
         {
             try
             {
+                var userGetId = _userRepository.GetById(user.Id);
+                if (userGetId == null)
+                    return Ok(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.NotFound));
+
+                UserServiceResponse validation = Validate(user);
+                if (validation != UserServiceResponse.Success)
+                    return Ok(new ServiceResponse<UserServiceResponse, UserTemplate>(validation));
+
                 var userMap = _mapper.Map<User>(user);
                 _userRepository.Update(userMap);
 
@@ -115,6 +129,47 @@ namespace Article.Blog.Api.Controllers
                 _logger.Error($"User Delete :{ex}");
                 return BadRequest(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Exception));
             }
+        }
+
+        private UserServiceResponse Validate(UserTemplate user)
+        {
+            #region EmailCheck
+
+            if (string.IsNullOrEmpty(user.Email))
+            {
+                return UserServiceResponse.InvalidEmail;
+            }
+
+            #endregion
+
+            #region NameCheck
+
+            if (string.IsNullOrEmpty(user.Name))
+            {
+                return UserServiceResponse.InvalidName;
+            }
+
+            #endregion
+
+            #region SurnameCheck
+
+            if (string.IsNullOrEmpty(user.Surname))
+            {
+                return UserServiceResponse.InvalidSurname;
+            }
+
+            #endregion
+
+            #region PasswordCheck
+
+            if (string.IsNullOrEmpty(user.Password) || user.Password.Length < 2)
+            {
+                return UserServiceResponse.InvalidPassword;
+            }
+
+            #endregion
+
+            return UserServiceResponse.Success;
         }
     }
 }

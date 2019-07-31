@@ -45,11 +45,11 @@ namespace Article.Blog.Api.Controllers
         {
             try
             {
-                var allComment = _commentRepository.GetAll();
+                var allComment = _commentRepository.GetAll().Where(x => x.IsActive == true);
                 var commentTemplate = new List<CommentTemplate>();
                 commentTemplate = _mapper.Map<List<CommentTemplate>>(allComment);
 
-                return Ok(commentTemplate.Where(x=>x.IsActive==true));
+                return Ok(commentTemplate);
             }
             catch (System.Exception ex)
             {
@@ -110,6 +110,25 @@ namespace Article.Blog.Api.Controllers
             catch (System.Exception ex)
             {
                 _logger.Error($"Comment Delete :{ex}");
+                return BadRequest(new ServiceResponse<CommentServiceResponse, CommentTemplate>(CommentServiceResponse.Exception));
+            }
+        }
+
+        [HttpPost]
+        [Route("GetCommentByArticleId")]
+        [ProducesResponseType(typeof(ServiceResponse<CommentServiceResponse, CommentTemplate>), 200)]
+        public IActionResult GetCommentByArticleId(int articleId)
+        {
+            try
+            {
+                var artcileDetail = _commentRepository.GetCommentByArticleId(articleId);
+                _mapper.Map<List<CommentTemplate>>(artcileDetail);
+
+                return Ok(artcileDetail);
+            }
+            catch (System.Exception ex)
+            {
+                _logger.Error($"GetCommentByArticleId :{ex}");
                 return BadRequest(new ServiceResponse<CommentServiceResponse, CommentTemplate>(CommentServiceResponse.Exception));
             }
         }

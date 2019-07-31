@@ -15,21 +15,10 @@ namespace Article.Blog.Common.Enum.Comment
         NotFound = -1,
 
         [EnumMember]
-        AuthenticationRecordMustBeProvided = -10,
+        CommentLengthTooLong = 4,
 
         [EnumMember]
-        FormAuthenticationRecordRequired = -11,
+        CommentLengthTooShort = 5,
 
-        [EnumMember]
-        CommentLengthTooLong = -60,
-
-        [EnumMember]
-        NameContainsNumericAndSpecialCharacters = 70,
-
-        [EnumMember]
-        TooMuchWhiteSpaceForNameField = 80,
-
-        [EnumMember]
-        TooMuchWhiteSpaceForSurameField = 81
     }
 }

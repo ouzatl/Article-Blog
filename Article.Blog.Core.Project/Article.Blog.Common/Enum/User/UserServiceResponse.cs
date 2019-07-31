@@ -27,6 +27,9 @@ namespace Article.Blog.Common.Enum.User
         InvalidName = -20,
 
         [EnumMember]
+        InvalidEmail = -22,
+
+        [EnumMember]
         InvalidSurname = -21,
 
         [EnumMember]

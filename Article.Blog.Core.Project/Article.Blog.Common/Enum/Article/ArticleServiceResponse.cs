@@ -14,21 +14,24 @@ namespace Article.Blog.Common.Enum.Article
         NotFound = -1,
 
         [EnumMember]
-        AuthenticationRecordMustBeProvided = -10,
+        ArticleTitleAlreadyExists = 2,
 
         [EnumMember]
-        FormAuthenticationRecordRequired = -11,
+        ArticleTitleLengthTooLong = 3,
 
         [EnumMember]
-        ArticleAlreadyExists = -31,
+        ArticleLengthTooShort = -3,
 
         [EnumMember]
-        ArticleLengthTooLong = -60,
+        ArticleSubTitleLengthTooLong = 4,
 
         [EnumMember]
-        TooMuchWhiteSpaceForNameField = 80,
+        ArticleSubLengthTooShort = -4,
 
         [EnumMember]
-        TooMuchWhiteSpaceForSurameField = 81
+        ArticleDescriptionLengthTooLong = 5,
+
+        [EnumMember]
+        ArticleDescriptionLengthTooShort = -5,
     }
 }

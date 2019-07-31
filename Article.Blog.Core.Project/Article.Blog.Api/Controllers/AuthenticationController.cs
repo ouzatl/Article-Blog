@@ -55,6 +55,22 @@ namespace Article.Blog.Api.Controllers
         }
 
         [HttpPost]
+        [Route("ForgotPassword")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<UserTemplate>))]
+        public IActionResult ForgotPassword()
+        {
+            try
+            {
+                return Ok();
+            }
+            catch (System.Exception ex)
+            {
+                _logger.Error($"ForgotPassword User:{ex}");
+                return BadRequest(new ServiceResponse<UserServiceResponse, UserTemplate>(UserServiceResponse.Exception));
+            }
+        }
+
+        [HttpPost]
         [Route("Login")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<UserTemplate>))]
         public IActionResult Login()
