@@ -347,3 +347,48 @@ The statement has been terminated.
    at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
    at Article.Blog.Repository.Repositories.BaseRepository`1.Add(T entity) in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\Repositories\BaseRepository.cs:line 34
    at Article.Blog.Api.Controllers.UserController.Add(UserTemplate user) in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Api\Controllers\UserController.cs:line 58
+2019-08-01 01:50:48.6681 ERROR GetCommentByArticleId : System.TypeInitializationException: The type initializer for 'Lucene.Net.Store.FSDirectory' threw an exception. ---> System.TypeInitializationException: The type initializer for 'Lucene.Net.Util.Constants' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Configuration.ConfigurationManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. Sistem belirtilen dosyayı bulamıyor.
+   at Lucene.Net.Support.AppSettings.Get(String key, String defValue)
+   at Lucene.Net.Util.Constants..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Util\Constants.cs:line 33
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 502
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory.Open(String path) in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 236
+   at Article.Blog.Common.Helpers.LuceneEngine..ctor() in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Common\Helpers\LuceneEngine.cs:line 28
+   at Article.Blog.Repository.Repositories.ArticleRepository.ArticleRepository.Search(String searchKey) in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\Repositories\ArticleRepository\ArticleRepository.cs:line 26
+2019-08-01 01:51:17.3167 ERROR GetCommentByArticleId : System.TypeInitializationException: The type initializer for 'Lucene.Net.Store.FSDirectory' threw an exception. ---> System.TypeInitializationException: The type initializer for 'Lucene.Net.Util.Constants' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Configuration.ConfigurationManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. Sistem belirtilen dosyayı bulamıyor.
+   at Lucene.Net.Support.AppSettings.Get(String key, String defValue)
+   at Lucene.Net.Util.Constants..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Util\Constants.cs:line 33
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 502
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory.Open(String path) in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 236
+   at Article.Blog.Common.Helpers.LuceneEngine..ctor()
+   at Article.Blog.Repository.Repositories.ArticleRepository.ArticleRepository.Search(String searchKey) in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\Repositories\ArticleRepository\ArticleRepository.cs:line 26
+2019-08-01 01:53:44.4314 ERROR Search Article : System.TypeInitializationException: The type initializer for 'Lucene.Net.Store.FSDirectory' threw an exception. ---> System.TypeInitializationException: The type initializer for 'Lucene.Net.Util.Constants' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Configuration.ConfigurationManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. Sistem belirtilen dosyayı bulamıyor.
+   at Lucene.Net.Support.AppSettings.Get(String key, String defValue)
+   at Lucene.Net.Util.Constants..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Util\Constants.cs:line 33
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 502
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory.Open(String path) in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 236
+   at Article.Blog.Common.Helpers.LuceneEngine..ctor()
+   at Article.Blog.Repository.Repositories.ArticleRepository.ArticleRepository.Search(String searchKey) in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\Repositories\ArticleRepository\ArticleRepository.cs:line 26
+2019-08-01 01:53:54.1567 ERROR Search Article : System.TypeInitializationException: The type initializer for 'Lucene.Net.Store.FSDirectory' threw an exception. ---> System.TypeInitializationException: The type initializer for 'Lucene.Net.Util.Constants' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Configuration.ConfigurationManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. Sistem belirtilen dosyayı bulamıyor.
+   at Lucene.Net.Support.AppSettings.Get(String key, String defValue)
+   at Lucene.Net.Util.Constants..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Util\Constants.cs:line 33
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 502
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory.Open(String path) in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 236
+   at Article.Blog.Common.Helpers.LuceneEngine..ctor()
+   at Article.Blog.Repository.Repositories.ArticleRepository.ArticleRepository.Search(String searchKey) in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\Repositories\ArticleRepository\ArticleRepository.cs:line 26
+2019-08-01 01:56:46.1531 ERROR Search Article : System.TypeInitializationException: The type initializer for 'Lucene.Net.Store.FSDirectory' threw an exception. ---> System.TypeInitializationException: The type initializer for 'Lucene.Net.Util.Constants' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Configuration.ConfigurationManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'. Sistem belirtilen dosyayı bulamıyor.
+   at Lucene.Net.Support.AppSettings.Get(String key, String defValue)
+   at Lucene.Net.Util.Constants..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Util\Constants.cs:line 33
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory..cctor() in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 502
+   --- End of inner exception stack trace ---
+   at Lucene.Net.Store.FSDirectory.Open(String path) in d:\Lucene.Net\FullRepo\trunk\src\core\Store\FSDirectory.cs:line 236
+   at Article.Blog.Common.Helpers.LuceneEngine..ctor() in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Common\Helpers\LuceneEngine.cs:line 28
+   at Article.Blog.Repository.Repositories.ArticleRepository.ArticleRepository.Search(String searchKey) in C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.Repository\Repositories\ArticleRepository\ArticleRepository.cs:line 26

@@ -152,9 +152,9 @@ namespace Article.Blog.Api.Controllers
         {
             try
             {
+                var result = _articleRepository.Search(searchKey);
 
-
-                return Ok();
+                return Ok(result);
             }
             catch (System.Exception ex)
             {

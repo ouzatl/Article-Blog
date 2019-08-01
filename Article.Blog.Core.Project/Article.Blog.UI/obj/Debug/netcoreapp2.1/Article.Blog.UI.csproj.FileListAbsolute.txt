@@ -34,3 +34,4 @@ C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.UI\ob
 C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.UI\obj\Debug\netcoreapp2.1\Article.Blog.UI.csproj.CopyComplete
 C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.UI\obj\Debug\netcoreapp2.1\Article.Blog.UI.dll
 C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.UI\obj\Debug\netcoreapp2.1\Article.Blog.UI.pdb
+C:\Users\Oğuz\Desktop\Article-Blog\Article.Blog.Core.Project\Article.Blog.UI\obj\Debug\netcoreapp2.1\Razor\Views\Home\Detail.g.cshtml.cs

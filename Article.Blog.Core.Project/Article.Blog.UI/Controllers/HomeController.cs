@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Article.Blog.UI.Models;
+using System.Net.Http;
 
 namespace Article.Blog.UI.Controllers
 {
@@ -12,6 +13,42 @@ namespace Article.Blog.UI.Controllers
     {
         public IActionResult Index()
         {
+            IEnumerable<ArticleViewModel> article = null;
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri("https://localhost:44390/api/Article/");
+
+                var responseTask = client.GetAsync("GetAllArticle");
+                responseTask.Wait();
+
+                var result = responseTask.Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    var readTask = result.Content.ReadAsAsync<IList<ArticleViewModel>>();
+                    readTask.Wait();
+                    article = readTask.Result;
+                }
+                else 
+                {
+                    article = Enumerable.Empty<ArticleViewModel>();
+                    ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                }
+            }
+            return View(article);
+        }
+
+        public IActionResult Detail()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+        public IActionResult Create()
+        {
+            ViewData["Message"] = "Your application description page.";
+
             return View();
         }
 

@@ -15,42 +15,24 @@ namespace Article.Blog.Common.Enum.User
         NotFound = -1,
 
         [EnumMember]
-        AuthenticationRecordMustBeProvided = -10,
+        InvalidPassword = -3,
 
         [EnumMember]
-        FormAuthenticationRecordRequired = -11,
+        InvalidName = -4,
 
         [EnumMember]
-        InvalidPassword = -12,
+        InvalidEmail = -5,
 
         [EnumMember]
-        InvalidName = -20,
+        InvalidSurname = -6,
 
         [EnumMember]
-        InvalidEmail = -22,
+        EmailAlreadyExists = -7,
 
         [EnumMember]
-        InvalidSurname = -21,
+        NameLengthTooLong = -8,
 
         [EnumMember]
-        EmailAlreadyExists = -31,
-
-        [EnumMember]
-        NameLengthTooLong = -60,
-
-        [EnumMember]
-        SurnameLengthTooLong = -61,
-
-        [EnumMember]
-        NameContainsNumericAndSpecialCharacters = 70,
-
-        [EnumMember]
-        SurnameContainsNumericAndSpecialCharacters = 71,
-
-        [EnumMember]
-        TooMuchWhiteSpaceForNameField = 80,
-
-        [EnumMember]
-        TooMuchWhiteSpaceForSurameField = 81
+        SurnameLengthTooLong = -9,
     }
 }

@@ -15,10 +15,9 @@ namespace Article.Blog.Common.Enum.Comment
         NotFound = -1,
 
         [EnumMember]
-        CommentLengthTooLong = 4,
+        CommentLengthTooLong = 11,
 
         [EnumMember]
-        CommentLengthTooShort = 5,
-
+        CommentLengthTooShort = 12,
     }
 }

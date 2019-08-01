@@ -1,6 +1,6 @@
-﻿using Article.Blog.Common.NLog;
+﻿using Article.Blog.Common.Helpers;
+using Article.Blog.Common.NLog;
 using Article.Blog.Data;
-using Article.Blog.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +22,19 @@ namespace Article.Blog.Repository.Repositories.ArticleRepository
         {
             try
             {
+                LuceneEngine engine = new LuceneEngine();
+
+                engine.AddToIndex(_dbContext.Set<Article.Blog.Data.Models.Article>().ToList());
+
+                var result = engine.Search("Name",searchKey);
+
+                if (result.Count > 0)
+                    return result;
             }
             catch (System.Exception ex)
             {
 
-                _logger.Error($"GetCommentByArticleId : {ex}");
+                _logger.Error($"Search Article : {ex}");
             }
 
             return null;
