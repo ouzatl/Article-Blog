@@ -15,13 +15,7 @@ Entity Framework Core
 Swagger
 In-memory Cache
 
-Daha geniş vaktim olsaydı.
+Redis eklenecek.
+UI tamamlanacak.
+Elastic Search tamamlanacak.
 
-Tüm EndPoint'leri tamamlamam için vaktim olmadı. İş yoğunluğumdan dolayı yapamadım.
-UI kısmını bitirebilirdim. MVC kullanmayı düşünüyordum. Fakat daha geniş bir zaman için React.js(öğrenmek için) kullanabilirdim.
-Cache olarak Redis kullanılabilirdi. Sadece memory cache kullanabildim. 
-Daha iyi ve anlaşılabilir bir mapper kullanabilirdim.
-JWT token.
-Her ortamda çalışabilmesi için Docker kullanabilirdim.
-ElasticSearch kullanılarbilirdi.
-StartUp.cs daha analşılabilir yapılabilirdi.
